@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html ng-app='MsgApp'>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Bootstrap Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">    
+    <style> body { font-size: 1.2em; }</style>
+     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Summary</title>
+  </head>
+<body ng-controller='MsgController'>
+<h1>Summary</h1>
+  <section>
+    <ul>
+      <!-- Link to every section in the page -->
+      <li><h2><a href="#section1">HTML</a></h2></li>
+      <li><h2><a href="#section2">CSS</a></h2></li>
+      <li><h2><a href="#section3">JavaScript</a></h2></li>
+      <li><h2><a href="#section4">Ruby on Rails</a></h2></li>
+      <li><h2><a href="#section5">AngularJS</a></h2></li>
+      <li><h2><a href="#section6">MISC</a></h2></li>
+    </ul>
+
+  </section>
+  <hr> 
+<!--HTML SECTION-->
+  <section id="section1">
+    <h2>HTML</h2>
+   <hr>  
+    <ul>
+        <li><h3>Hypertext Markup Language</h3>
+            <br>
+            <h4><b>HTML</b> provides the structure of a webpage. It doesn't provide any info about how the components look like (color or size). <b>HTML</b> tells you only what are the components.</h4>
+            <h4>In summary <b>HTML</b> anotates content and defines document structure.</h4>
+
+            <h4><code>&lt;p&gt; </code> - paragraph tag</h4>
+            <hr> 
+        </li> <!--end of Hypertext Markup Language-->
+         
+        <li><h3>History of HTML</h3>
+            <br>
+            <h4><b>W3C</b> - the first organisation that was developing HTML.</h4>
+            <h4><b>1997</b> - it was wild west of the web.</h4>
+            <h4><b>2000</b> - W3C wanted XHTML 1.0 (wrong direction).</h4>
+            <h4><b>2004</b>-<b>WHATWG</b> (browsers bending together) started driving HTML.</h4>
+            <h4><b>2007</b>-<b>WHATWG</b> and <b>W3C</b> started working together (and produced <b>HTML5</b>).</h4>
+            <br>
+            <h4> Modern Browsers silently update themself without asking the user for it. (evergreen browsers- all modern browsers - Chrome, Firefox, Edge).</h4>
+            <h4>IMPORTANT WEB LINKS:</h4>
+            <h4><a href="http://www.caniuse.com">www.caniuse.com - information about which browser supports what feature.</a></h4>
+            <h4><a href="https://validator.w3.org/">validator.w3.org - validates html code or webpage.</a></h4>
+            <h4><a href="https://www.w3schools.com/browsers/browsers_stats.asp">w3schools.com Statistics about browser usage.</a></h4>
+            <hr>
+        </li> <!--end of History of HTML-->
+        <li><h3>Anatomy of HTML tag</h3>
+            <br>
+            <h4>ELEMENT NAME---&gt;<code>&lt;opening tag&gt;CONTENT&lt;/closing tag&gt;</code></h4>
+            <br>
+            <h4>No space is allowed to exist between opening bracket and element name also between closing bracket and the slash.</h4>
+            <h4>Space is allowed everywhere else and extra space gets ignored.</h4>
+            <br>
+            <h4><code>&lt;p id="myId"&gt;&lt;/p&gt;</code> id-attribute name, "myid" -attribute value.</h4>
+            <br>
+            <h4>Attributes can only be specified on the opening tag.</h4>
+            <h4>Double quotes and single quotes needs to be closed in proper order (double single single double).</h4>
+            <h4>In HTML 5 selfclosing tags are removed even empty tag should have opening and closing tag.</h4>
+            <hr> 
+        </li> <!--end Anatomy of HTML tag-->
+        <li><h3>Basic HTML document structure</h3>
+            <br>
+            <h4><code>&lt;!doctype html&gt;</code> - HTML5 declaration THIS TAG ALWAYS HAS TO BE USED (starting the html document).</h4>
+            <h4><code>&lt;!doctype html>&lt;html&gt;&lt;head&gt;&lt;meta&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</code> -  usuall basic structure of HTML file.</h4>
+            <h4><code>&lt;!--Comment text is here--&gt;</code> -  comment in html.</h4>
+            <br>
+            <h4>Important rule is that if 2 tags are nested you cannot close the parent before closing the child.</h4>
+            <h4>When browser opens the page it interpret the html code sequentially from top to bottom. 1. doctype 2. html 3. head etc.</h4>
+            <hr> 
+        </li> <!--end Basic HTML document structure-->
+        <li><h3>HTML Content Models</h3>
+            <h4><code>&lt;div&gt;</code> - generic BLOCK element</h4>
+            <h4><code>&lt;span&gt;</code> - generic INLINE element</h4>
+            <br>
+            <h4>Block elements are not allowed to be child of inline elements.</h4>
+            <h4>Block elements start on new row while nested inline elements on same row.</h4>
+            <h4>There is scheme and list of the types of content, tags (flow, phrasing): <a href="https://www.w3.org/TR/html/dom.html#the-nothing-content-model">www.w3.org/TR/html/dom.html#the-nothing-content-model</a><h4>
+            <h4>Officially not part of HTML5, but still used.<h4>
+            <h4>Roughly equivalent to flow content &amp; phrasing content.<h4>
+            <hr> 
+        </li> <!--end HTML Content Models-->
+        <li><h3>Heading elements and semantic tags</h3>
+            <br>
+            <h4><code>&lt;h1&gt;SEO specialists agree that this heading is the most important heading and helps SEO ranking&lt;/h1&gt;</code></h4>
+            <h4>Heading tags in html should not be used for text size. Everything can be applied using CSS.<h4>
+            <br>
+            <h4>Semantic tags:</h4>
+            <h4><code>&lt;header&gt;&lt;nav&gt;&lt;/nav&gt;&lt;/header&gt;</code> - HTML5 tag that can consist a company logo, tag line or navigation. Navigation usually contains links to different parts of the web site.</h4>
+            <h4><code>&lt;section&gt;&lt;article&gt;&lt;/article&gt;&lt;/section&gt;</code> - article usually should go inside a section this way the html code is easier to read.</h4>
+            <h4><code>&lt;aside&gt;</code> - is basically content that is related to the main topic of the page but not in direct relationship as the main content.</h4>
+            <h4><code>&lt;footer&gt;</code> - footer information is within this tag</h4>
+            <br>
+            <h4>Semantic HTML elements make the code easier to read.</h4>        
+            <h4>Semantic HTML elements are block level elements(new line).</h4>
+            <h4>Well chosen content of H1 element is crucial to SEO.</h4>
+            <h4>Semantic elements allow for a more meaningful expression of the structure of our HTML page.</h4>
+            <hr> 
+        </li> <!--end Heading elements and semantic tags-->
+        <li><h3>Lists</h3>
+            <br>
+            <h4><code>&lt;ul&gt;</code> - unordered list with another nested <code>&lt;ul&gt;</code> child you can create a sublist.</h4>
+            <h4><code>&lt;li&gt;</code> - every element of a list.</h4>
+            <h4>The only thing that is allowed in UL element is LI element everything else is not allowed.</h4>
+            <br>
+            <h4><code>&lt;ol&gt;</code> - ordered list you can create sublist same way as with unordered list</h4>
+            <br>
+            <h4>Lists provide a natural and commonly used grouping of content.</h4>
+            <h4>Very often, lists are used for structuring navigation portions of the web page.</h4>
+            <hr> 
+        </li> <!--End Lists-->
+        <li><h3>HTML Character Entity References</h3>
+          <br>
+          <h4><code>&amp;amp;</code> - &amp; and symbol.</h4>
+          <h4><code>&amp;lt;</code> - &lt; less than symbol.</h4>
+          <h4><code>&amp;gt;</code> - &gt; greater then symbol.</h4>
+          <h4><code>&amp;copy;</code> - &copy; copyright symbol.</h4>
+          <h4><code>&amp;nbsp;</code> - placing it between words make the text staying on the same row no matter what.</h4>
+          <h4><code>&amp;quot;</code> - quote unrestricted by character set (using normal quotes can display ugly symbols with certain charsets).</h4>
+          <br>
+          <h4>Html Entities help avoid rendering issues.</h4>
+          <h4>Safeguard against more limited character encoding.</h4>
+          <h4>Provide characters not available on a keyboard.</h4>
+          <hr> 
+        </li> <!--End HTML Character Entity References-->
+        <li><h3>Creating Links</h3>
+            <br>
+            <h4>External Links</h4>
+            <h4><code>&lt;a href="http://www.google.com" target="_blank" title="Like Our Page!"&gt;</code> - external link tag
+            <h4><code>target="_blank"</code> - opens link in new window.</h4>
+            <h4><code>title=""</code> - helps accessibility people (text to speech).</h4>
+            <br>
+            <h4>Internal Links</h4>
+            <h4><code>&lt;a href="#section1"&gt;#section1&lt;/a&gt;</code> - internal link used for navigation to section1 tag</h4>
+            <h4><code>&lt;section id="section1"&gt;</code> - notice that section id does not have # before its name</h4>
+            <h4>This type of links links to element by its id.</h4>
+            <h4>Navigation links are very important for SPA (single page applications).</h4>
+            <br>
+            <h4>A tag is not only inline tag (as of HTML5) this is a way to make company logo clickable as homepage. This is very easy to do since HTML5.</h4>
+            <h4><code>&lt;a href="same-directory.html" title="same dir link"&gt;</code></h4>
+            <h4><code>&lt;div&gt; DIV linking to a file in the same directory&lt;/div&gt;</code></h4>
+            <h4><code>&lt;/a&gt;</code></h4>         
+            <hr>
+        </li> <!--End Creating Links-->
+        <li><h3>Displaying Images</h3>
+            <br>
+            <h4><code>&lt;img src="picture.jpg" width="400" height="235" alt ="Picture with a quote"&gt;</code></h4>
+            <h4>Its good practice to allways set height and width of the image because this way the browser</h4>
+            <h4>is reserving the space for an image and website layout stays same even if the image doesnt load.</h4>
+            <h4>Alt tag is helping accessibility to people that use text to speech.</h4>            
+            <hr>
+        </li> <!--End Displaying Images-->                
+    </ul>
+  </section>
+
+<!--Jquery -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<!--Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
