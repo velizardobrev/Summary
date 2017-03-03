@@ -1,11 +1,21 @@
-body {
+body {    
 background-color: black;
 color: gold;
 }
 code {
-color: orangered;
+color: lightsalmon;
 background-color: black;
 }
 h4 {
 color: white;
+}
+li{
+    list-style: none;
+}
+a:link, a:visited {
+  color: lightskyblue;
+}
+.menu a:hover, a:active{
+    color: white;
+    text-decoration: none;
 }

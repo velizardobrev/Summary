@@ -16,7 +16,7 @@
   </head>
 <body ng-controller='MsgController'>
 <h1>Summary</h1>
-  <section>
+  <section class="menu">
     <ul>
       <!-- Link to every section in the page -->
       <li><h2><a href="#section1">HTML</a></h2></li>
@@ -139,7 +139,7 @@
         <li><h3>Creating Links</h3>
             <br>
             <h4>External Links</h4>
-            <h4><code>&lt;a href="http://www.google.com" target="_blank" title="Like Our Page!"&gt;</code> - external link tag
+            <h4><code>&lt;a href="http://www.google.com" target="_blank" title="Like Our Page!"&gt;</code> - external link tag </h4>
             <h4><code>target="_blank"</code> - opens link in new window.</h4>
             <h4><code>title=""</code> - helps accessibility people (text to speech).</h4>
             <br>
@@ -161,14 +161,184 @@
             <h4>Its good practice to allways set height and width of the image because this way the browser</h4>
             <h4>is reserving the space for an image and website layout stays same even if the image doesnt load.</h4>
             <h4>Alt tag is helping accessibility to people that use text to speech.</h4>            
-            <hr>
+            
         </li> <!--End Displaying Images-->                
     </ul>
-  </section>
+  </section> <!--END HTML SECTION-->
+<!--CSS SECTION-->
+  <hr>
+  <section id="section2">
+    <h2>CSS</h2>
+   <hr>  
+    <ul>
+        <li><h3>Cascading Style Sheets Basics</h3>
+            <br>
+            <h4><b>Power of CSS</b></h4>
+            <h4>On the web content is the king. How users engage with the content and how the content is presented is actually very important.</h4>
+            <h4>The use of color, positioning, size, among other things, is all part of that. Cascading style sheets, or CSS, is the technology that provides the styling capability. </h4>
+            <br>
+            <h4><a href="http://www.csszengarden.com"> www.csszengarden.com - same content presented in hundreds of web designs</a></h4>
+            <br>
+            <h4>CSS is an incredibly powerful technology that can not only style your content, but also also create a particular user experience that you would want your users to have. </h4>
+            <!--End Power of CSS-->
+            <hr>
+            <h4><b>Anatomy of CSS rule</b></h4>
+            <br>
+            <h4>Selector ---&gt;<code>p {</code></h4>
+            <h4><code>color: blue;</code>&lt;--declaration, color is the property, blue is the value</h4>
+            <h4><code>}</code></h4>
+            <br>
+            <h4>A CSS rule can consist several declarations.</h4>
+            <h4>A collection of CSS rules is called a stylesheet.</h4>
+            <h4>Most of the browsers come with predefined default styles. (its our job to redefine or modify theese).</h4>
+            <h4>To make a comment in CSS file we can use: <code>/*comment*/</code></h4>          
+            <!--End Anatomy of CSS rule-->
+            <hr>
+            <h4><b>Element, Class and ID Selectors</b></h4>
+            <br>
+            <h4>Element selector</h4>
+            <h4><code>p {</code></h4>
+            <h4><code>color: blue;</code></h4>
+            <h4><code>}</code></h4>
+            <br>
+            <h4>Every p element in our html page is going to be affected by this CSS rule.</h4>
+            <br>
+            <h4>Class selector</h4>
+            <h4>definition of a class---&gt;<code>.blue {</code></h4>
+            <h4><code>color: blue;</code></h4>
+            <h4><code>}</code></h4>
+            <h4><code>&lt;p class="blue"&gt;...&lt;/p&gt;</code> - usage of a class in html tag.</h4>              
+            <br>  
+            <h4>Class selector is specified by dot followed by the name of the class.</h4> 
+            <h4>To be used the html tags should have the property <code>class="blue"</code>(example).</h4>   
+            <h4>For example the default paragraphs will be completely unaffected by this CSS rule.</h4>
+            <h4>There is difference in syntax between declaration and usage of class selectors.</h4>
+            <br>  
+            <h4>ID selector</h4>
+            <h4>definition of a id---&gt;<code>#name {</code></h4>
+            <h4><code>color: blue;</code></h4>
+            <h4><code>}</code></h4>
+            <h4><code>&lt;div id="name"&gt;...&lt;/div&gt;</code> - usage of id in html tag.</h4>
+            <h4>In this example every html tag that is not with the id name will be completely unaffected by this CSS rule.</h4>
+            <h4>Id selectors can't and should not be reused (their use is to style a specific element).</h4> 
+            <br> 
+            <h4>CSS declarations can be grouped(CSS rules will apply to multiple selectors). </h4>
+            <h4>Example of grouped CSS rule for div selectors and blue class. Notice that selectors are comma separated:</h4> 
+            <h4><code>div, .blue {</code></h4>
+            <h4><code>color: blue;</code></h4>
+            <h4><code>}</code></h4>                                                                
+            <!--End Element, Class and Id Selectors--> 
+            <hr>
+            <h4><b>Combining Selectors</b></h4>
+            <br>
+            <h4>Element with Class Selector</h4>
+            <h4>The following example targets every p that has <code>class="big"</code>:</h4>
+            <h4><code>p.big {</code></h4>
+            <h4><code>font-size: 20px;</code></h4>
+            <h4><code>}</code></h4>
+            <br>
+            <h4>There should not be any spaces between the first selector and the second selector.</h4>
+            <h4>Only "p" tags with <code>class="big"</code> will follow this CSS rule. Any other tags with the same class will just ignore it.</h4>
+            <br>
+            <h4>Child Selector</h4>
+            <h4><code>article > p {</code></h4>
+            <h4><code>color: blue;</code></h4>
+            <h4><code>}</code></h4>
+            <br>
+            <h4>Only "p" elements that will be affected are going to be the one that are child of article elements.</h4>
+            <h4>"p" elements that are child of other elements (div,section) wont be affected. This selector is not limited to Element Selectors (can be used in combination with class or id selector).</h4>   
+            <br>
+            <h4>Descendant Selector</h4>
+            <h4><code>article p {</code></h4>
+            <h4><code>color: blue;</code></h4>
+            <h4><code>}</code></h4>   
+            <br>
+            <h4>This selector is targeting every p element that is inside (at any level) of article element. It will affect elements even if they are not direct child of article element. Example:</h4> 
+            <h4><code>&lt;article&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;/article&gt;</code> - this p will be affected by this selector</h4>
+            <h4>This selector is not limited to Element Selectors (can be used in combination with class or id selector).</h4>  
+            <br>
+            <h4>Adjacent sibling selector (selector + selector) less used generally so not covered.</h4>
+            <h4>General sibling selector (selector ~ selector) less used generally so not covered.</h4>                          
+            <hr>
+            <!--End Combining Selectors--> 
+            <h4><b>Pseudo-Class Selectors</b></h4>
+            <br>
+            <h4><code>selector:pesudo-class {</code></h4>
+            <h4><code>code</code></h4>
+            <h4><code>}</code></h4>              
+            <br>
+            <h4><code>a:link, a:visited {</code></h4>
+            <h4><code>text-decoration: none;</code> - removing underline of hyperlinks in this case</h4>
+            <h4><code>background-color: green; </code></h4>
+            <h4><code>border: 1px solid blue; </code></h4>
+            <h4><code>color: black; </code> - changing text color</h4> 
+            <h4><code>display: block; </code></h4>
+            <h4><code>width: 200px; </code></h4>
+            <h4><code>text-align: center; </code></h4>
+            <h4><code>margin-bottom: 1px; </code></h4>
+            <h4><code>}</code></h4>
+            <br>
+            <h4>:link and :visited Pseudo-Class Selectors are controlling the style of hyperlinks before and after they are visited.</h4>
+            <br>
+            <h4><code>a:hover, a:active {</code></h4>
+            <h4><code>background-color: red;</code></h4>
+            <h4><code>}</code></h4>
+            <br>
+            <h4>:hover and :active Pseudo-Class Selectors are controlling the style when hovering over the link and in the moment of clicking it.</h4> 
+            <br>  
+            <h4>The code in the following example will make bigger the 3rd link of the list:</h4>
+            <h4><code>header li:nth-child(3) {</code></h4>
+            <h4><code>font-size: 24px; </code></h4>
+            <h4><code>}</code></h4> 
+            <br>  
+            <h4>The code in the following example will make every second element with gray background (good for tables):</h4> 
+            <h4><code>section div:nth-child(odd) {</code></h4>
+            <h4><code>background-color: gray;</code></h4>
+            <h4><code>}</code></h4> 
+            <br>
+            <h4>As selectors can be combined pseudo selectors can also be combined(will change the cursor ever the 4th element):</h4> 
+            <h4><code>section div:nth-child(4):hover {</code></h4>
+            <h4><code>cursor: pointer;</code></h4>
+            <h4><code>}</code></h4> 
+            <br>
+            <h4>Simple/readable is preferred instead of Complicated/Tricky.</h4>                                                         
+            <hr>              
 
+            <!--End Combining Selectors-->              
+        </li> <!--End Cascading Style Sheets Basics-->
+        <li><h3>CSS rules conflict resolutions and text styling</h3>
+        <br>
+        <hr>
+        </li> <!--End CSS rules conflict resolutions and text styling-->               
+   </section> <!--END CSS section-->
+  <hr>     
+  <section id="section6">
+    <h2>MISC</h2>
+   <hr>  
+    <ul>
+        <li><h3>BrowserSync Commands</h3>
+            <br>
+            <h4><code>browser-sync start --server --directory --files "*"</code> - starting a BrowserSync local server with all files in the directory and subdirectories included </h4>
+            <hr>
+        </li> <!--End Power of CSS-->       
+   </section> <!--END CSS section-->           
 <!--Jquery -->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <!--Bootstrap -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</body>
+</body><!-- 
+      template 1
+        <li><h3>Power of CSS</h3>
+        <br>
+        <h4><a href="http://www.insertweblink.com"> - insert description </a></h4>
+        <h4><code>insert code</code> - insert description</h4>
+        <hr>
+        </li>
+      template 2   
+        <hr>
+        <h4><b>Anatomy of CSS rule</b></h4>
+        <br> 
+        -->
 </html>
+
+
