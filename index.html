@@ -308,9 +308,207 @@
         </li> <!--End Cascading Style Sheets Basics-->
         <li><h3>CSS rules conflict resolutions and text styling</h3>
         <br>
-        <hr>
+
         </li> <!--End CSS rules conflict resolutions and text styling-->               
    </section> <!--END CSS section-->
+<hr> 
+  <section id="section3">
+    <h2>JavaScript</h2>
+   <hr>  
+    <ul>
+        <li><h3>Basics of Javascript</h3>
+        <br>
+        <h4><b>Where to place Javascript Code</b></h4>
+        <h4><code>&lt;script&lt;&gt;/script&gt;</code> - inline script</h4>
+        <h4><code>&lt;script src="js/script.js"&gt;&lt;/script&gt;</code> - external file script</h4>
+        <h4><code>console.log();</code> - function thats available on all browsers (except internet explorer) </h4>
+        <br>
+        <h4>Javascript is a single threaded enviroment.</h4>
+        <h4>Javascript gets executed sequentially (as of html).</h4>
+        <br>
+        <h4><b>Defining Variables, Function and Scope</b></h4>
+        <h4>Variables</h4>
+        <h4>Variable definition should always start with 'var'.</h4>
+        <h4>In JS no types are daclared. Javascript is dynamically typed language. Same variable can hold different types during the life of the execution.</h4>
+        <h4><code>var x = 4, y = 4;</code> - this is shortcut in JS for multiple declarations</h4>
+        <hr>
+        <h4><b>Functions</b></h4>
+        <h4><code>Function a () {...}</code> - usuall way to define function</h4>
+        <h4><code>var a = function () {...}</code> - no name is defined after the function keyword</h4>
+        <h4>In both ways we execute the function with:</h4>
+        <h4><code>a();</code> - function execution/invocation (synonyms)</h4>
+        <br>
+        <h4>We can also define arguments to be passed to the function (arguments are defined without 'var'):</h4>
+        <h4><code>function compare (x, y) {</code></h4>
+        <h4><code>return x > y;</code></h4>
+        <h4><code>}</code></h4>
+        <br>
+        <h4>Everything below is  perfectly legal synthax in JS:</h4>
+        <h4><code>function compare (x, y) {...}</code></h4>
+        <h4><code>var a = compare(4,5);</code> - after execution the result will be stored in a</h4>
+        <h4><code>compare(4, "a");</code> -  we are not storing the result anywhere</h4>
+        <h4><code>compare();</code> -  we are executing the function without passing any value</h4>
+        <hr>
+        <h4><b>Scope</b></h4>
+        <h4>Global scope - variables and functions defined here are available everywhere. Global scope does not have an Outer Environment as it's the most outer there is.</h4>
+        <h4>Function aka lexical - variables and functions defined here are available only within this function</h4>
+        <h4>Scope chain - everything is executed in an Execution Context. Function invocation creates a new Execution Context.</h4>
+        <br>
+        <h4>Each Execution Context has:</h4>
+        <h4>-its own Variable Environment</h4>
+        <h4>-Special 'this' object</h4>
+        <h4>-Reference to its Outer Environment</h4>
+        <br>
+        <h4>Example of how scope chain work:</h4>
+        <h4>Referenced (not defined) variable will be searched for in its current scope first. If not found, the Outer Reference will be searched.
+        If not found, the Outer Reference's Outer Reference will be searched, etc. This will keep going until the Global Scope. If not found in Global scope, the variable is undefined(not found).</h4>
+        <br>
+        <h4>Another code example of how scope chain work:</h4>
+        <h4><code>var message = "in global";</code></h4>
+        <h4><code>console.log("global: message = " + message);</code> - The message is stored in this variable which is also stored in the Window object(global execution context).</h4>
+        <br>
+        <h4><code>var a = function () {</code></h4>
+        <h4><code>var message = "inside a";</code></h4>
+        <h4><code>console.log("a: message = " + message);</code></h4>
+        <h4><code>b(); </code> - output will be b: message inside global scope</h4>
+        <h4><code>}</code></h4>
+        <br>
+        <h4><code>Function b () {</code></h4>
+        <h4><code>console.log("b: message = " + message); </code></h4>
+        <h4><code>}</code></h4>
+        <br>
+        <h4><code>a();</code> - Output will be a: message = inside a</h4>
+        <h4>If we define the function b inside function a - output of function b will be inside a.</h4>
+        <br>
+        <h4>In summary:</h4>
+        <h4>All variables are dynamically typed.</h4>
+        <h4>Defining functions - creates its own scope (lexical).</h4>
+        <h4>JS core runs within an Execution Context.</h4>
+        <h4>Scope chain is used to retrieve variables from Outer Variable Environments.</h4>
+        </li>
+        <!--end Javascript Basics-->
+        <hr>
+        <li><h3>Javascript Types and Common Language Constructs</h3>
+        <br>
+        <h4>Each language defines some build-in types. Build-in types can be used to build other data structures.</h4>
+        <br>
+        <h4><b>Object type</b></h4>
+        <h4>Object type is a collection of name/value pairs. In below example favorites is name. Everything inside the curly braces is the value of this pair:</h4>
+        <h4><code>Person Object:</code></h4>
+        <h4><code>firstName: "Velizar",</code></h4>
+        <h4><code>lastname: "Dobrev",</code></h4>
+        <h4><code>favorites: {</code></h4>
+        <h4><code>Burger: "MC Cheeseburger"</code></h4>
+        <h4><code>Candy: "Green Snickers"</code></h4>
+        <h4><code>IceCream: "White Boss"</code></h4>
+        <h4><code>}</code></h4>
+        <br>
+        <h4><b>Primitives</b></h4>
+        <h4>Primitive type represents a single, immutable value (not an object). Immutable means once it's set, it can't be changed. Value becomes read-only.</h4>
+        <h4>1) Boolean can only have 2 values: true or false.</h4>
+        <h4>2) Undefined signifies that novalue has ever been set. Can only have one value: undefined. A variable should never be set to undefined because this is counter to the core meaning of undefined.</h4>
+        <h4><code>if (x == undefined) {</code></h4>
+        <h4><code>console.log("x is undefined");</code></h4>
+        <h4><code>}</code></h4>
+        <h4>Undefined means it has been declared. But not given any value.</h4>
+        <h4><code>var x;</code></h4>
+        <h4>The memory has been allocated but not value has been stored in this memory space (no value has ever been explicitly set yet).</h4>
+        <h4>3) Another value that JS language defines is NULL. Null signifies the lack of value (opposed to undefined- lack of definition). It's ok to explicitly set a variable to null.</h4>
+        <h4>4) Number is the only numeric type in JavaScript. It's always represented under the hood as double-precision 65-bit floating point. JS does not have an integer type. Integers are a subset of doubles instead of a separate data type.</h4>
+        <h4>5) String is sequence of characters used to represent text.</h4>
+        <h4>6) Symbol is new to ES6 and is not covered.</h4>
+        <br>
+        <h4>In summary:</h4>
+        <h4>Javascript defines 7 build-in types. One object and 6 Primitives.</h4>
+        <hr>
+        <h4><b>Common Language Constructs</b></h4>
+        <br>
+        <h4>String concatenation</h4>
+        <h4><code>var string = "Hello";</code> - set a string to Hello</h4>
+        <h4><code>string += " World";</code> - concatenating a string with another string</h4>
+        <h4><code>console.log( string + "!");</code> - concatenating but not storing and throwing into the function</h4>
+        <br>
+        <h4>Regular math operators (+,-,*,/)</h4>
+        <h4>Math principles apply here.</h4>
+        <h4><code>console.log(undefined/5);</code> - output will be NaN (not a number).</h4>
+        <h4>If we call a callculations function and call a function without passing arguments its pretty common to get NaN.</h4>
+        <hr>
+        <h4>Equality and Strict Equality in JS</h4>
+        <h4><code>if (x==y) {</code></h4>
+        <h4><code>console.log ("x = 4 is equal to y = 4");</code></h4>
+        <h4><code>}</code></h4>
+        <br>
+        <h4>The output of above piece of code will be true.</h4>
+        <br>
+        <h4><code>x= "4";</code> - we are changing x to be string</h4>
+        <h4><code>if (x == y) {</code></h4>
+        <h4><code>console.log(x='4' is equal to y = 4");</code></h4>
+        <h4><code>}</code></h4>
+        <br>
+        <h4>Again the output of the above code will be true. Because in JavaScript type coercion.  And type coercion just means that the language converts something for you from one type to another type automatically on the fly. If we don't want this functionality we can use Strict equality:</h4>
+        <br>
+        <h4><code>If (x === y {</code></h4>
+        <h4><code>console.log("Strict: x = '4' is equal to y=4");</code></h4>
+        <h4><code>}</code></h4>
+        <h4><code>else {</code></h4>
+        <h4><code>console</code></h4>
+        <h4><code>.log("Strict: x='4' is NOT equal to y=4");</code></h4>
+        <h4><code>}</code></h4>
+        <br>
+        <h4>Output is going to be false this time.</h4>
+        <hr>
+        <h4><b>Everything that is False in JavaScript:</b></h4>
+        <h4><code>false, null, undefined, "", 0, NaN</code></h4>
+        <h4>Console Chrome Developer Tools trick:</h4>
+        <h4><code>Boolean(null);</code> - written directly into the console passing type as parametor into boolean can quickly test if its default false or true.</h4>
+        <br>
+        <h4><b>Everything that is True in JavaScript:</b></h4>
+        <h4><code>true, "hello", 1, -1, "false"</code></h4>
+        <hr>
+        <h4><b>In JS there is established best practice (matter of syntax and how JS engine works).</b></h4>
+        <h4><code>function a()</code></h4>
+        <h4><code>{</code></h4>
+        <h4><code>return</code></h4>
+        <h4><code>{</code></h4>
+        <h4><code>name: "Velizar"</code></h4>
+        <h4><code>};</code></h4>
+        <h4><code>}</code></h4>
+        <h4>Output of function a will be undefined. The engine puts semicolum after the return automatically and skips the rest. Its good practice to always place semicolons at the end of statements.</h4>
+        <br>
+        <h4><code>function b()</code></h4>
+        <h4><code>return {</code></h4>
+        <h4><code>name: "Dobrev"</code></h4>
+        <h4><code>};</code></h4>
+        <h4><code>}</code></h4>
+        <h4>This type of writing is not just cosmetic in JS its necessary and best practice!</h4>  
+        <hr>
+        <h4><b>For loop in JS</b></h4>
+        <h4><code>var sum = 0;</code></h4>
+        <h4><code>for (var i = 0; i < 10; i++) {</code></h4>
+        <h4><code>sum = sum + i;</code></h4>
+        <h4><code>}</code></h4>
+        <h4><code>console.log("sum of 0 through 9 is: " + sum);</code></h4>
+        <h4>If var "i" was declared before the above script JS will throw an error.</h4> 
+        <hr>
+        <h4><b>Handling Default Values</b></h4>    
+        <h4><code>function orderChickenWith(sideDish) {</code></h4>
+        <h4><code>if (sideDish === undefined) {}</code></h4>
+        <h4><code>sideDish = "whatever";}</code></h4>
+        <h4><code>}</code></h4>
+        <h4><code>console.log("Chicken with " + sideDish);</code></h4>
+        <h4><code>}</code></h4>
+        <h4><code>orderChickenWith("noodles");</code></h4>
+        <h4><code>orderChickenWith();</code></h4>
+        <h4>JavaScript has a shortcut of setting default value.</h4> 
+        <h4><code>function orderChickenWith(sideDish) {</code></h4>
+        <h4><code>sideDish = sideDish || "whatever"; </code> - first statement is false and second gets returned</h4>
+        <h4><code>console.log("Chicken with " + sideDish);</code></h4>
+        <h4><code>}</code></h4>
+        </li>
+        <!--end Javascript Types and Common Language Constructs-->        
+    </ul>
+  </section>
+    <!--HTML SECTION-->
   <hr>     
   <section id="section6">
     <h2>MISC</h2>
@@ -321,7 +519,7 @@
             <h4><code>browser-sync start --server --directory --files "*"</code> - starting a BrowserSync local server with all files in the directory and subdirectories included </h4>
             <hr>
         </li> <!--End Power of CSS-->       
-   </section> <!--END CSS section-->           
+   </section> <!--END Misc section-->           
 <!--Jquery -->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <!--Bootstrap -->
