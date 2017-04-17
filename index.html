@@ -577,6 +577,7 @@
             <h4><code>1+2-3*2</code>Output: -3</h4>
             <h4><code>(1+2-3)*2</code>Output: 0</h4>
             <br>
+            <hr>
             <h4><b>Python Lists</b></h4>
             <h4><code>pc_games = ['Mass Effect 2', 'League Of Legends', 'Fallout 4', 'Star Citizen']</code></h4>
             <h4><code>pc_games[0]</code>- Mass Effect 2</h4>
@@ -593,6 +594,7 @@
             <h4><code>pc_games.reverse()</code>- ['Stellaris', 'Star Citizen', 'Mass Effect 2', 'League Of Legends', 'Fallout 4']</h4>
             <h4><code>del pc_games[4]</code>- ['Stellaris', 'Star Citizen', 'Mass Effect 2', 'League Of Legends']</h4>
             <br>
+            <hr>
             <h4><b>Python Tuples</b></h4>
             <br>
             <h4>Unlike lists tuples cannot be changed after created.</h4>
@@ -603,6 +605,7 @@
             <h4><code>min(tuple)</code> - getting the minimal element of a tuple</h4>
             <h4><code>max(tuple)</code> - getting the maximum element of a tuple</h4>
             <br>
+            <hr>
             <h4><b>Dictionaries(maps)</b></h4>
             <br>            
             <h4>Dictionaries are made of values with a unique key.</h4>
@@ -618,6 +621,7 @@
              <h4><code>print(Mass_Effect.keys()) </code>- list of keys </h4> 
              <h4><code>print(Mass_Effect.values()) </code>- list of values </h4> 
              <br>
+             <hr>
              <h4><b>Conditionals(if,else,elif/== != >= <=)</b></h4>
              <h4><code>age=21<br>
              if age > 16 :<br>
@@ -643,6 +647,7 @@
              &nbsp;&nbsp;&nbsp;&nbsp;print("You get a birthday party yeah ")</code>Output: You get a birthday party yeah</h4>
              
              <br>
+             <hr>
              <h4><b>Looping</b></h4>
              <h4><code><br>
              for x in range(0,10):<br>
@@ -672,7 +677,41 @@
              &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; continue #ignoring everything below<br>
              &nbsp;&nbsp;&nbsp;&nbsp; i += 5 #(this should be ignored)</code>Output: 0 2 4 6 8</h4>
 
-             <!-- FUNCTIONS NEXT-->
+            <br>
+            <hr>
+            <h4><b>Functions</b></h4>
+
+             <h4><code><br>def addNumber(fNum, lNum):<br>
+             &nbsp;&nbsp;&nbsp;&nbsp; sumNum = fNum + lNum<br>
+             &nbsp;&nbsp;&nbsp;&nbsp; return sumNum <br><br>
+             print(addNumber(1,4))</code>Output: 5</h4>
+              <h4><code>string = addNumber(1,4)<br>
+              print(string)</code>Output: 5 </h4>
+
+            <br>
+            <hr>
+            <h4><b>Strings</b></h4>
+
+            <h4><code><br>long_string = "I'll catch you if you fall - The Floor"<br>
+            print(long_string[0:4])</code>Output: I'll</h4>
+            <h4><code>print(long_string[-5:])</code>Output: Floor </h4>
+
+            <h4><code><br>long_string = "I'll catch you if you fall - The Floor"<br>
+            print(long_string[0:4]</code>Output: I'll</h4>
+            <h4><code>print(long_string[:-5])</code>Output: I'll catch you if you fall - The </h4>
+            <h4><code>print(long_string[:4]+" be there")</code>Output: I'll be there </h4>
+            <h4><code>print("%c is my %s letter and my number %d number is %.5f" %('X','favorite', 1, .14))</code>Output: X is my favorite letter and my number 1 nubmer is 0.14000 </h4>
+            <h4><code>print(long_string.capitalize())</code>I'll catch you if you fall - The Floor</h4>
+            <h4><code>print(long_string.find("Floor"))</code>33</h4>
+            <h4><code>print(long_string.isalpha())</code>False</h4>
+            <h4><code>print(long_string.isalnum())</code>False</h4>
+            <h4><code>print(len(long_string))</code>38</h4>
+            <h4><code>print(long_string.replace("Floor", "Ground"))</code>I'll catch you if you fall - The Ground</h4>
+            <h4><code>print(long_string.strip())</code>I'll catch you if you fall - The Floor</h4>
+
+            <h4><code><br>quote_list = long_string.split(" ")<br>
+            print(long_string[0:4])</code>Output: ["I'll", 'catch', 'you', 'if', 'you', 'fall', '-', 'The', 'Floor']</h4>
+            
 
             <hr>
         </li> <!--Summary Tutorials--> 
